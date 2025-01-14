@@ -20,9 +20,9 @@ scrape_configs:
     static_configs:
       - targets: ['node-exporter:9100']
 
-  - job_name: 'dummy_node'
+  - job_name: 'laravel_ecommerce_app'
     static_configs:
-      - targets: ['localhost:1234']
+      - targets: ['34.105.193.234']
 
   - job_name: 'blackbox'
     metrics_path: /probe
@@ -32,7 +32,7 @@ scrape_configs:
       - targets:
         - http://prometheus.io    # Target to probe with http.
         - https://prometheus.io   # Target to probe with https.
-        - http://example.com:8080 # Target to probe with http on port 8080. This is for getting site down alert
+        - http://34.105.193.234 # Target to probe with http on port 8080. This is for getting site down alert
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
