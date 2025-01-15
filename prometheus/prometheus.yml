@@ -1,8 +1,8 @@
 global:
   scrape_interval: 30s
 
-rule_files:
-  - alert_rules.yml
+# rule_files:
+#   - alert_rules.yml
 
 alerting:
   alertmanagers:
